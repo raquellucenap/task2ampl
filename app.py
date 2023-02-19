@@ -38,6 +38,13 @@ st.write('## 🔀 Post-process')
 max_tracks = st.number_input('Maximum number of tracks (0 for all):', value=0)
 shuffle = st.checkbox('Random shuffle')
 
+st.write('## Select Voice or instrument')
+vi_checkbox = st.checkbox('Select voice!')
+if vi_checkbox:
+    st.write('Voice is selected!')
+else:
+    st.write('Instrument is selected!')
+
 if st.button("RUN"):
     st.write('## 🔊 Results')
     mp3s = list(audio_analysis.index)
