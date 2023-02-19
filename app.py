@@ -38,12 +38,28 @@ st.write('## 🔀 Post-process')
 max_tracks = st.number_input('Maximum number of tracks (0 for all):', value=0)
 shuffle = st.checkbox('Random shuffle')
 
+st.write('## Select Tempo⏲️')
+danceability_select_range = st.slider('Select a range', 60,185, (60,185))
+st.write("You selected the range:", danceability_select_range)
+
 st.write('## Select Voice or instrument')
 vi_checkbox = st.checkbox('Select voice!')
 if vi_checkbox:
-    st.write('Voice is selected!')
+    st.write('Voice is selected!🎤👄')
 else:
-    st.write('Instrument is selected!')
+    st.write('Instrument is selected!🎻🎺')
+    
+st.write('## Select Danceability🕺🏻💃🪩')
+danceability_select_range = st.slider('Select a range', 0,3, (0,3))
+st.write("You selected the range:", danceability_select_range)
+
+st.write('## Select Arousal')
+arousal_select_range = st.slider('Select a range', 1,9, (1,9))
+st.write("You selected the range:", arousal_select_range)
+
+st.write('## Select valence')
+valence_select_range = st.slider('Select a range', 1,9, (1,9))
+st.write("You selected the range:", valence_select_range)
 
 if st.button("RUN"):
     st.write('## 🔊 Results')
