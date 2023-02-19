@@ -58,7 +58,7 @@ arousal_select_range = st.slider('Select a range', 1,9, (1,9))
 st.write("You selected the range:", arousal_select_range)
 
 st.write('## Select valence')
-valence_select_range = st.slider('Select a range', 1,9, (1,9))
+valence_select_range = st.slider('Select a range', 1,8.9, (1,8.9))
 st.write("You selected the range:", valence_select_range)
 
 if st.button("RUN"):
